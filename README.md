@@ -26,7 +26,7 @@ $ go run eqr.go
 make
 ```
 
-Before that, run command `go mod tidy` first.
+Before that, run command `go mod tidy` first and make sure you have installed `imgcat`(brew install imgcat).
 
 
 ## Credit

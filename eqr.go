@@ -3,30 +3,27 @@ package main
 import (
 	"fmt"
 	"image/color"
-	"log"
 	"os"
 	"os/exec"
 
+    "github.com/i0Ek3/noerr"
 	qrcode "github.com/skip2/go-qrcode"
 )
 
 func process(link, output string) {
 	err := qrcode.WriteColorFile(link, qrcode.Medium, 256, color.Black, color.White, output)
-	if err != nil {
-		log.Fatalf("Qrcode create failed!")
-	}
+    //msg := "Qrcode create failed"
+    noerr.Xerr(err)
 
 	qr, err := os.Open(output)
-	if err != nil {
-		log.Fatalf("Cannot open the file: %v", err.Error())
-	}
+    //msg = "Cannot open the file"
+    noerr.Xerr(err)
 	defer qr.Close()
 
 	cmd := exec.Command("imgcat", output)
 	stdout, errCmd := cmd.Output()
-	if errCmd != nil {
-		log.Fatalf("Cannot run command: %v", errCmd.Error())
-	}
+    //msg = "Cannot run command"
+    noerr.Xerr(errCmd/*, msg*/)
 	fmt.Println(string(stdout))
 }
 
