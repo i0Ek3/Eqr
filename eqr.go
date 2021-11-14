@@ -10,7 +10,7 @@ import (
 	qrcode "github.com/skip2/go-qrcode"
 )
 
-func process(link, output string) {
+func Process(link, output string) {
 	err := qrcode.WriteColorFile(link, qrcode.Medium, 256, color.Black, color.White, output)
     //msg := "Qrcode create failed"
     noerr.Xerr(err)
@@ -43,5 +43,5 @@ func main() {
 	runIO(&link, MSG1)
 	runIO(&output, MSG2)
 
-	process(link, output)
+	Process(link, output)
 }

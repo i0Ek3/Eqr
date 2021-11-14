@@ -23,10 +23,30 @@ $ go run eqr.go
 
 // or
 
-make
+make clean ; make install 
 ```
 
 Before that, run command `go mod tidy` first and make sure you have installed `imgcat`(brew install imgcat).
+
+### 3. Import It Into Go File
+
+```Go
+// main.go
+
+package main
+
+import (
+    eqr "github.com/i0Ek3/Eqr"
+)
+
+func main() {
+    // offer your own string field link and output
+    // you will get an image of your link and a png
+    // file named output
+    eqr.Process(link, output)
+}
+
+```
 
 
 ## Credit
