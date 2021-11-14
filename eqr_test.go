@@ -4,6 +4,7 @@ import (
     "testing"
     "image/color"
 
+    "github.com/i0Ek3/asrt"
     qrcode "github.com/skip2/go-qrcode"
 )
 
@@ -14,9 +15,7 @@ func TestEqr(t *testing.T) {
 
 	    err := qrcode.WriteColorFile(link, qrcode.Medium, 256, color.Black, color.White, output)
 
-        if err != nil {
-            t.Errorf("Wrong!")
-        }
+        asrt.Asrt(t, err, nil)
     })
 
     t.Run("Test2", func(t *testing.T) {
@@ -25,9 +24,7 @@ func TestEqr(t *testing.T) {
 
 	    err := qrcode.WriteColorFile(link, qrcode.Medium, 256, color.Black, color.White, output)
 
-        if err != nil {
-            t.Errorf("Wrong!")
-        }
+        asrt.Asrt(t, err, nil)
     })
 
     /*t.Run("Test3", func(t *testing.T) {
@@ -36,9 +33,7 @@ func TestEqr(t *testing.T) {
 
 	    err := qrcode.WriteColorFile(link, qrcode.Medium, 256, color.Black, color.White, output)
 
-        if err != nil {
-            t.Errorf("Wrong!")
-        }
+        asrt.Asrt(t, err, nil)
     })*/
 
     t.Run("Test4", func(t *testing.T) {
@@ -47,9 +42,7 @@ func TestEqr(t *testing.T) {
 
 	    err := qrcode.WriteColorFile(link, qrcode.Medium, 256, color.Black, color.White, output)
 
-        if err != nil {
-            t.Errorf("Wrong!")
-        }
+        asrt.Asrt(t, err, nil)
     })
 
     /*t.Run("Test5", func(t *testing.T) {
@@ -58,8 +51,6 @@ func TestEqr(t *testing.T) {
 
 	    err := qrcode.WriteColorFile(link, qrcode.Medium, 256, color.Black, color.White, output)
 
-        if err != nil {
-            t.Errorf("Wrong!")
-        }
+        asrt.Asrt(t, err, nil)
     })*/
 }
