@@ -1,4 +1,4 @@
-module github.com/i0Ek3/Eqr
+module github.com/i0Ek3/eqr
 
 go 1.17
 

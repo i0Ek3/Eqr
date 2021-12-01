@@ -1,4 +1,4 @@
-# Eqr
+# eqr
 
 Everything is qrcode.
 
@@ -10,9 +10,9 @@ Input Link  --->   Process(Link)   --->   Generate & Show Image
 
 ## Usage
 
-### 1. Run command `./eqr`
+### 1. Run Command `./eqr`
 
-### 2. Build and run
+### 2. Build & Run
 
 ```Shell
 $ go build eqr.go 
@@ -28,7 +28,7 @@ make clean ; make install
 
 Before that, run command `go mod tidy` first and make sure you have installed `imgcat`(brew install imgcat).
 
-### 3. Import It Into Go File
+### 3. Import
 
 ```Go
 // main.go
@@ -36,17 +36,20 @@ Before that, run command `go mod tidy` first and make sure you have installed `i
 package main
 
 import (
-    eqr "github.com/i0Ek3/Eqr"
+    "github.com/i0Ek3/eqr"
 )
 
 func main() {
-    // offer your own string field link and output
-    // you will get an image of your link and a png
-    // file named output
+    // Offer your own string field link and output,
+    // you will get an image generate by Process().
     eqr.Process(link, output)
 }
 
 ```
+
+## TODO
+
+- [ ] cmd arguments support
 
 
 ## Credit

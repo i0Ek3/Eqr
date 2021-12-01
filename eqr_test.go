@@ -18,7 +18,7 @@ func TestEqr(t *testing.T) {
         asrt.Asrt(t, err, nil)
     })
 
-    t.Run("Test2", func(t *testing.T) {
+    /*t.Run("Test2", func(t *testing.T) {
         link := "https://github.com"
         output := "github"
 
@@ -27,7 +27,7 @@ func TestEqr(t *testing.T) {
         asrt.Asrt(t, err, nil)
     })
 
-    /*t.Run("Test3", func(t *testing.T) {
+    t.Run("Test3", func(t *testing.T) {
         link := ""
         output := "nothing"
 
